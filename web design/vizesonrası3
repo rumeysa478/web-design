@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Background Color</title>
+</head>
+<body>
+<button onclick = "changeColor()">Change Color</button>	
+<script>
+	function changeColor()
+	{
+		document.body.style.backgroundColor="lightblue";
+	}
+</script>
+</body>
+</html>
+
+ <!DOCTYPE html>
+<html>
+<head>
+	<style>
+.dark
+		{
+			background-color: black;
+			color:white;
+		}
+	</style>	
+</head>
+<body>
+	<h1>Java Lesson</h1>
+<button onclick = "darkMode()">Dark Mode</button>	
+<script>
+	function darkMode()
+	{
+		document.body.classList.toggle("dark");
+	}
+</script>
+</body>
+</html>
+
+    <!DOCTYPE html>
+<html>
+<body>
+	<p id="demo">Old Text</p>
+<button onclick = "changeText()">Change Text</button>
+<script>
+	function changeText()
+	{
+		document.getElementById("demo").innerHTML= "New Text!";
+	}
+</script>
+
+	<p id="text">Java Script is Fun!</p>
+<button onclick = "bigger()">Bigger</button>
+<script>
+	function bigger()
+	{
+		document.getElementById("text").style.fontSize="40px";
+	}
+</script>
+
+	<input type="text" id="username">
+<button onclick = "check()">Submit</button>
+<script>
+	function check()
+	{
+		let user=
+		document.getElementById("username").value;
+		if(user.trim()=="")
+			{alert("username cannot be empty");}
+			else
+				{alert("welcome "+ user);}
+	}
+</script>
+
+<input type="text" id="email">
+<button onclick = "validate()">Check Email</button>
+<script>
+	function validate()
+	{
+		let mail=
+		document.getElementById("email").value;
+		if(mail.includes("@"))
+			{alert("valid email");}
+			else
+				{alert("Invalid Email");}
+	}
+</script>
+	
+	<input type="password" id="pass">
+<button onclick = "checkPassword()">Check Password</button>
+<script>
+	function checkPassword()
+	{
+		let p=
+		document.getElementById("pass").value;
+		if(p.length>=8)
+			{alert("strong password");}
+			else
+				{alert("Ipassword is too short");}
+	}
+</script>
+
+<p id="demo1"
+onmouseover="red()"
+onmouseout="black()">Move mouse here</p>
+<script>
+	function red()
+	{
+		document.getElementById("demo1").style.color=" red";
+	}
+	function black()
+	{
+		document.getElementById("demo1").style.color=" black";
+	}
+</script>
+
+<textarea id="text1"
+onkeyup="countChars()"></textarea>
+<p id="result">0 characters</p>
+<script>
+	function countChars()
+	{
+		let txt=
+		document.getElementById("text1").value;
+		document.getElementById("result").innerHTML=txt.length + "characters";
+	}
+</script>
+
+	<input type="text" onkeyup="show(this.value)">
+<p id="demo2"></p>
+<script>
+	function show(val)
+	{
+		document.getElementById("demo2").innerHTML=val;
+	}
+</script>
+
+<input type="number" 
+id="weight"
+placeholder="Weight">
+<input type="number" 
+id="height"
+placeholder="Height">
+
+<button onclick="calculate()">Calculate BMI</button>
+<p id="result1"></p>
+<script>
+	function calculate()
+	{
+		let w = document.getElementById("weight").value;
+		let h = document.getElementById("height").value;
+		let bmi = w / (h * h);
+		document.getElementById("result1").innerHTML="BMI: "
++ bmi.toFixed(2);
+	}
+</script>
+
+</body>
+</html>
